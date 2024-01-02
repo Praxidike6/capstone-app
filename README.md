@@ -1,1 +1,1 @@
-# My capstone project version of the Little Lemon restatant website
+# My capstone project version of the Little Lemon restaurant website
