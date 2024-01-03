@@ -6,7 +6,7 @@ const BookingForm = ({availableTimes, dispatchOnDateChange, submitData}) => {
   const defaultTime = availableTimes[0];
   const minimumNumberOfGuests = 1;
   const maximumNumberOfGuests = 10;
-  const occasions = ['Birthday', 'Anniversary', 'Engagement', 'Retirement'];
+  const occasions = ['', 'Birthday', 'Anniversary', 'Engagement', 'Retirement'];
   const invalidNameErrorMessage = 'Please enter a name min 2 characters.';
   const invalidEmailErrorMessage = 'Please enter a valid email address.';
   const invalidDateErrorMessage = 'Please choose a valid date';
@@ -34,8 +34,8 @@ const BookingForm = ({availableTimes, dispatchOnDateChange, submitData}) => {
     isEmailValid() &&
     isDateValid() &&
     isTimeValid() &&
-    isNumberOfGuestsValid() &&
-    isOccasionValid();
+    isNumberOfGuestsValid();
+  // isOccasionValid();
 
   const handleDateChange = (e) => {
     setDate(e.target.value);
@@ -136,14 +136,11 @@ const BookingForm = ({availableTimes, dispatchOnDateChange, submitData}) => {
       </FormField>
       <FormField
         label='Occasion'
-        htmlFor='booking-occasion'
-        hasError={!isOccasionValid()}
-        errorMessage={invalidOccasionErrorMessage}>
+        htmlFor='booking-occasion'>
         <select
           id='booking-occasion'
           name='booking-occasion'
           value={occasion}
-          required={true}
           onChange={(e) => setOccasion(e.target.value)}>
           {occasions.map((occasion) => (
             <option
