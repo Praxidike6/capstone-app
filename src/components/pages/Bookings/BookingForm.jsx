@@ -11,7 +11,6 @@ const BookingForm = ({availableTimes, dispatchOnDateChange, submitData}) => {
   const invalidEmailErrorMessage = 'Please enter a valid email address.';
   const invalidDateErrorMessage = 'Please choose a valid date';
   const invalidTimeErrorMessage = 'Please choose a valid time';
-  const invalidOccasionErrorMessage = 'Please choose a valid occasion';
   const invalidNumberOfGuestsErrorMessage =
     'Please enter a number between 1 and 10';
 
@@ -25,7 +24,6 @@ const BookingForm = ({availableTimes, dispatchOnDateChange, submitData}) => {
   const isDateValid = () => date !== '';
   const isTimeValid = () => time !== '';
   const isNumberOfGuestsValid = () => numberOfGuests !== '';
-  const isOccasionValid = () => occasion !== '';
   const isNameValid = () => name.length > 1;
   const isEmailValid = () => name.length > 1;
 
